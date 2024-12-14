@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #mainList {
+            background-color: green;
+            text-align: center;
+            
+        }
+
+        #mainList .mainItem {
+            display: inline-block;
+            padding: 15px;
+            font-size: x-large;
+        }
+
+        .mainItem a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .mainItem a:hover {
+            color: gold;
+        }
+
+        #subList {
+            display: none;
+            position:absolute;
+            background-color: green;
+            margin: auto;
+            list-style-type: none;
+            padding: 20px;
+        }
+
+        #subList li {
+            padding: 10px;
+        }
+
+        /* Show the dropdown when hovering over the Products list item */
+        #Product:hover #subList{
+            display: block;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+    <ul id="mainList">
+        <li class="mainItem"><a href="#">Home</a></li>
+        <li class="mainItem"><a href="#">About</a></li>
+        <li class="mainItem" id="Product">
+            <a href="#">Products</a>
+            <ul id="subList">
+                <li><a href="#">Engineering</a></li>
+                <li><a href="#">Telecom</a></li>
+                <li><a href="#">Energy</a></li>
+                <li><a href="#">Finance</a></li>
+                <li><a href="#">Consultancy</a></li>
+            </ul>
+        </li>
+        <li class="mainItem"><a href="#">Services</a></li>
+        <li class="mainItem"><a href="#">Contact</a></li>
+    </ul>
+    </div>
+
+</body>
+</html>
